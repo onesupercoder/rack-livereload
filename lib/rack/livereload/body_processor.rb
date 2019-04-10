@@ -3,7 +3,7 @@ require 'rack/livereload'
 module Rack
   class LiveReload
     class BodyProcessor
-      LIVERELOAD_JS_PATH = '/__rack/livereload.js'
+      LIVERELOAD_JS_PATH = '/__rack/livereload.min.js'
       HEAD_TAG_REGEX = /<head>|<head[^(er)][^<]*>/
       LIVERELOAD_PORT = 35729
 
@@ -14,7 +14,8 @@ module Rack
       end
 
       def livereload_local_uri
-        "#{protocol}://localhost:#{@options[:live_reload_port]}/livereload.js"
+        "#{protocol}://localhost:#{@options[:live_reload_port]}/" +
+          'livereload.min.js'
       end
 
       def initialize(body, options)
