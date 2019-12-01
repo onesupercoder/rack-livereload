@@ -37,7 +37,7 @@ module Rack
       end
 
       def html?
-        @headers['Content-Type'] =~ %r{text/html}
+        @headers['Content-Type'] =~ %r{text/html|application/xhtml\+xml}
       end
 
       def get?
