@@ -46,7 +46,7 @@ config.middleware.use(Rack::LiveReload,
 ```
 
 In addition, Rack::LiveReload's position within middleware stack can be
-specified by inserting it relative to an exsiting middleware via
+specified by inserting it relative to an existing middleware via
 `insert_before` or `insert_after`. See the [Rails on Rack: Adding a
 Middleware](http://guides.rubyonrails.org/rails_on_rack.html#adding-a-middleware)
 section for more detail.
