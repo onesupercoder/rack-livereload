@@ -95,6 +95,12 @@ describe Rack::LiveReload::ProcessingSkipAnalyzer do
       it { should be_html }
     end
 
+    context 'XHTML content' do
+      let(:headers) { { 'Content-Type' => 'application/xhtml+xml' } }
+
+      it { should be_html }
+    end
+
     context 'PDF content' do
       let(:headers) { { 'Content-Type' => 'application/pdf' } }
 
