@@ -27,6 +27,9 @@ MyApp::Application.configure do
 
   # or, if you're using better_errors:
   config.middleware.insert_before Rack::Lock, Rack::LiveReload
+  
+  # or, if you're using better_erros with rails 6.
+  config.middleware.insert_before Rack::Runtime, Rack::LiveReload
 
   # ...
 end
